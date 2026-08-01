@@ -10,7 +10,7 @@ bool check(vector<int>&a,int w , int x){
     for(int i = 1; i < n ; i ++){
         vector<int>next(x,0);
         for(int j = 0 ; j < min(x,i) ; j++){
-            next[]
+            next[];
         }
     }
 }
