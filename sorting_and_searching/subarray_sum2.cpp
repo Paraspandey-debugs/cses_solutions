@@ -18,12 +18,13 @@ int32_t main() {
     map<int,int>hash;
     for(int i = 0 ; i < n ; i ++){
         prefix[i+1] = prefix[i] + a[i];
-        hash[prefix[i+1]]++;
+        
     }
-    for(int i = 0 ; i <= n ; i ++){
+    for(int i = n ; i >= 0 ; i --){
         if(hash.count(prefix[i] + x)){
-            ans++;
+            ans += hash[prefix[i] + x];
         }
+        hash[prefix[i]]++;
     }
     
     cout<<ans<<endl;
